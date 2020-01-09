@@ -10,7 +10,7 @@ print("              codeby åurejien               \n ")
 print("----------------------------------------------\n")
 print("Nombre d'essais")
 while x!=0:
-  try:
+ try:
    if x == 6:
      print("■■■■■■")
    elif x == 5:
