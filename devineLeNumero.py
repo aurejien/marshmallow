@@ -10,6 +10,7 @@ print("              codeby åurejien               \n ")
 print("----------------------------------------------\n")
 print("Nombre d'essais")
 while x!=0:
+  try:
    if x == 6:
      print("■■■■■■")
    elif x == 5:
@@ -63,6 +64,9 @@ while x!=0:
      print("Plus grand")
    elif n>a:
      print("Plus petit")
+  except ValueError:
+    print("Erreur d'entrée des données")
+    continue
      
      
      
