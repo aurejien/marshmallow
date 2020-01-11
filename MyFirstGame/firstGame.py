@@ -31,13 +31,13 @@ class GameWidget(Widget):
 
         with self.canvas:
             self.player = Rectangle(source="img/flappy.png",pos=(10,10),size=(60,60))
-            self.ennemy = Rectangle(source="img/ennemy.png",pos=(400,400),size=(60,60))
+            self.ennemy = Rectangle(source="img/ennemy.png",pos=(400,400),size=(100,100))
         self.keysPressed = set()
 
         Clock.schedule_interval(self.move_step,0)
 
-        self.sound = SoundLoader.load("music.wav")
-        self.sound.play()    
+        #self.sound = SoundLoader.load("music.wav")
+        #self.sound.play()    
         
     def _on_keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self._on_key_down)
@@ -56,7 +56,7 @@ class GameWidget(Widget):
         currentx = self.player.pos[0]
         currenty = self.player.pos[1]
 
-        step_size = 100 * dt
+        step_size = 200 * dt
 
         if "w" in self.keysPressed:
             currenty += step_size
